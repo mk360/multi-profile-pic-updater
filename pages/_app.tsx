@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app'
 import RestClient from '../rest-client'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  RestClient.a();
+  RestClient.getGitlabAccount();
   return <Component {...pageProps} />
 }
 
