@@ -6,4 +6,10 @@ export default class RestClient {
         const json: GitlabUser = await response.json();
         return json;
     }
+
+    static async loginToGoogle() {
+        const response = await fetch('/api/google-account');
+        const jsonUrl: {url: string } = await response.json();
+        window.location.href = jsonUrl.url;
+    };
 }
